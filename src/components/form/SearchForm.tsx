@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 
@@ -31,13 +31,13 @@ const SearchForm = ({ userName, setUserName }: SearchFormProps) => {
       <Label htmlFor="search" className="sr-only">
         search
       </Label>
-      <input
+      <Input
         type="text"
         id="search"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Search Github users..."
-        className="flex-grow bg-background border px-4 py-1 rounded"
+        className="flex-grow bg-background "
       />
       <Button type="submit">Search</Button>
     </form>
